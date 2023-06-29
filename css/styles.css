@@ -2,13 +2,68 @@
   --cloud-color: #f4f4fd;
   --navy-color: #2e2f42;
   --white-color: #ffffff;
+  --accent-color: #4d5ae5;
+  --btnact-color: #404bbf;
 }
+
 body {
   font-size: 16px;
   line-height: 1.5;
   font-family: "Roboto", sans-serif;
   color: #434455;
   background-color: var(--white-color);
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  padding: 0;
+}
+img {
+  display: block;
+}
+.container {
+  width: 1158px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.header {
+  width: 1440px;
+  height: 72px;
+  flex-shrink: 0;
+  border-bottom: 1px solid #e7e9fc;
+  background: var(--white-color);
+  display: flex;
+}
+.header-container {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  justify-content: space-between;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  column-gap: 76px;
+}
+.header-list {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 40px;
 }
 
 .logo-link {
@@ -19,7 +74,7 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   text-decoration: none;
-  color: #4d5ae5;
+  color: var(--accent-color);
 }
 .logo-text {
   color: var(--navy-color);
@@ -32,25 +87,33 @@ body {
 }
 .nav-link:hover,
 .nav-link:focus {
-  color: #404bbf;
+  color: var(--btnact-color);
 }
 .address {
   font-style: normal;
+  column-gap: 332px;
 }
 .contacts {
   font-weight: 400;
   letter-spacing: 0.02em;
   color: #434455;
+  display: flex;
+  gap: 40px;
+  margin-left: auto;
+
   font-style: normal;
 }
 .contacts:hover,
 .contacts:focus {
-  color: #404bbf;
+  color: var(--btnact-color);
+}
+.main-container {
+  width: 1440px;
+  padding: 188px 0;
+  background-color: var(--navy-color);
+  flex-shrink: 0;
 }
 
-.main-page {
-  background-color: var(--navy-color);
-}
 .page-title {
   font-weight: 700;
   font-size: 56px;
@@ -58,6 +121,10 @@ body {
   text-align: center;
   letter-spacing: 0.02em;
   color: var(--white-color);
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  margin: 0 472px;
 }
 
 .button-main {
@@ -67,12 +134,53 @@ body {
   line-height: 1.5;
   letter-spacing: 0.04em;
   color: var(--white-color);
-  background: #4d5ae5;
+  background: var(--accent-color);
   cursor: pointer;
+  display: block;
+  margin-left: 636px;
+
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  display: block;
+  min-width: 169px;
+  height: 56px;
+  border: none;
 }
 .button-main:hover,
 .button-main:focus {
-  background: #404bbf;
+  background: var(--btnact-color);
+}
+
+.description-container {
+  width: 1128px;
+  flex-shrink: 0;
+  justify-content: space-between;
+  padding-top: 146px;
+  padding-bottom: 120px;
+  margin: 0 156px;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.description-list {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  flex-direction: row;
+}
+.description-item {
+  width: calc((100% - 72px) / 4);
 }
 .third-title {
   font-weight: 500;
@@ -80,11 +188,29 @@ body {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--navy-color);
+  margin-bottom: 8px;
 }
 .text {
   font-weight: 400;
   letter-spacing: 0.02em;
   color: #434455;
+}
+.section-image {
+  width: 1128px;
+  flex-shrink: 0;
+  display: flex;
+  margin: 120px 156px;
+  justify-content: center;
+}
+.image-container {
+  padding-bottom: 120px;
+}
+.image-list {
+  display: flex;
+  gap: 24px;
+}
+.image-list-item {
+  width: calc(100%-48px / 3);
 }
 .secondary-title {
   font-weight: 700;
@@ -96,9 +222,22 @@ body {
   color: var(--navy-color);
   text-decoration: none;
   list-style: none;
+  padding-bottom: 72px;
 }
-.team {
+.section-team {
+  width: 1440px;
   background-color: var(--cloud-color);
+  align-items: center;
+  justify-content: center;
+  padding: 120px 0;
+}
+.team-coontainer {
+  display: flex;
+  width: 232px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
 }
 .secondary-title {
   font-weight: 700;
@@ -107,20 +246,62 @@ body {
   letter-spacing: 0.02em;
   text-transform: capitalize;
   color: var(--navy-color);
+  padding-top: 120px;
+  text-align: center;
+}
+.team-images {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  padding-bottom: 120px;
 }
 .team-images-item {
+  width: calc((100% - 72px) / 4);
+  border-radius: 0px 0px 4px 4px;
   background-color: var(--white-color);
+}
+.section-team .third-title {
+  text-align: center;
+  padding-top: 32px;
+  margin-bottom: 8px;
+}
+.section-team .text {
+  margin-bottom: 8px;
+  text-align: center;
+  padding-bottom: 32px;
+}
+.footer-container {
+  width: 1440px;
+  height: 312px;
+  flex-shrink: 0;
+  padding: 100px 0;
 }
 
 .footer {
   background-color: var(--navy-color);
 }
+.footer-container .logo-link {
+  margin-left: 156px;
+}
+
 .flogo-text {
   color: var(--cloud-color);
 }
 .ftext {
   letter-spacing: 0.02em;
   color: var(--cloud-color);
+  margin: 16px 1020px 100px 156px;
+}
+.portfolio-section {
+  width: 1440px;
+  padding-bottom: 120px;
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 72px;
+  padding-top: 47px;
 }
 
 .button-portfolio {
@@ -129,15 +310,34 @@ body {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
-  color: #4d5ae5;
+  color: var(--accent-color);
   background: var(--cloud-color);
   cursor: pointer;
+  border-radius: 4px;
+  border: 1px solid #e7e9fc;
+  padding: 12px 24px;
 }
 
 .button-portfolio:hover,
 .button-portfolio:focus {
   color: var(--white-color);
-  background: #404bbf;
+  background: var(--btnact-color);
+  border: 1px solid transparent;
+}
+.portfolio-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.portfolio-item {
+  display: flex;
+  width: 360px;
+  height: 420px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  flex-shrink: 0;
+  border: 1px solid #e7e9fc;
 }
 
 .prtfolio-title {
@@ -146,6 +346,9 @@ body {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--navy-color);
+  padding-bottom: 8px;
+  padding-top: 32px;
+  padding-right: 16px;
 }
 .portfolio-text {
   font-weight: 400;
