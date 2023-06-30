@@ -85,6 +85,7 @@ img {
   font-weight: 500;
   letter-spacing: 0.02em;
   color: var(--navy-color);
+  padding: 24px 0;
 }
 .nav-link:hover,
 .nav-link:focus {
@@ -336,7 +337,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   column-gap: 24px;
-  row-gap: 84px;
+  row-gap: 48px;
 }
 .portfolio-card {
   padding: 32px 16px;
@@ -355,7 +356,7 @@ img {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--navy-color);
-  padding-bottom: 8px;
+  margin-bottom: 8px;
   padding-top: 32px;
   padding-right: 16px;
 }
