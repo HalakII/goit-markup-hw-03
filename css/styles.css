@@ -210,17 +210,6 @@ img {
   padding: 120px 0;
 }
 
-.secondary-title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.11;
-  letter-spacing: 0.02em;
-  text-transform: capitalize;
-  color: var(--navy-color);
-  padding-top: 120px;
-  text-align: center;
-  margin-bottom: 72px;
-}
 .team-images {
   display: flex;
   gap: 24px;
